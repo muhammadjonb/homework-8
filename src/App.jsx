@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react'
 import Header from './components/header/Header';
+import Main from './components/main/Main';
 
 const url = "https://dummyjson.com/products";
 const App = () => {
@@ -9,8 +10,9 @@ const App = () => {
     try {
       const res = await fetch(url)
       const data = await res.json()
-      setProducts(data.products);
-      console.log(data.products);
+      const product = data.products
+      setProducts(product);
+      console.log(product);
     } catch (error) {
       console.log(error);      
     }
@@ -23,14 +25,9 @@ const App = () => {
   return (
     <>
       <Header />
-      {products.map((product) => (
-        <div key={product.id}>
-          <h2>{product.title}</h2>
-          <p>${product.price}</p>
-        </div>
-      ))}
+      <Main products={products} />
     </>
-  )
+  );
 }
 
 export default App

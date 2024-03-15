@@ -75,6 +75,8 @@ header{
                 display: flex;
                 align-items: center;
                 flex-direction: column;
+                transition: 0.2s;
+                cursor: pointer;
                 gap: 6px;
                 ion-icon{
                     width: 24px;
@@ -83,6 +85,14 @@ header{
                 p{
                     font-size: 16px;
                     color: #5c5c5c;
+                }
+                &:hover{
+                    p{
+                        color: #DA002B;
+                    }
+                    ion-icon{
+                        color: #DA002B;
+                    }
                 }
             }
         }
