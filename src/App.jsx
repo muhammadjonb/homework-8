@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react'
+import Header from './components/header/Header';
 
 const url = "https://dummyjson.com/products";
 const App = () => {
@@ -20,14 +21,15 @@ const App = () => {
   }, []);
 
   return (
-    <div>
+    <>
+      <Header />
       {products.map((product) => (
         <div key={product.id}>
           <h2>{product.title}</h2>
           <p>${product.price}</p>
         </div>
       ))}
-    </div>
+    </>
   )
 }
 

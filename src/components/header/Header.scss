@@ -1,0 +1,90 @@
+header{
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    background: #fff;
+    .navbar{
+        height: 88px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 6px;
+        &_logo{
+            width: 120px;
+            img{
+                width: 100%;
+            }
+        }
+        &_katalog{
+            display: flex;
+            align-items: center;
+            border: 2px solid #000;
+            background-color: transparent;
+            transition: all 0.2s ease-in;
+            border-radius: 12px;
+            padding: 10px 24px;
+            font-size: 20px;
+            cursor: pointer;
+            gap: 16px;
+            ion-icon{
+                width: 32px;
+                height: 32px;
+            }
+            &:hover{
+                color: #DA002B;
+                border-color: #DA002B;
+            }
+        }
+        &_search{
+            max-width: 700px;
+            display: flex;
+            align-items: center;
+            background-color: #bababa4d;
+            justify-content: space-between;
+            border-radius: 12px;
+            overflow: hidden;
+            padding: 4px;
+            width: 100%;
+            input{
+                width: 100%;
+                font-size: 18px;
+                padding: 4px 16px;
+                background-color: transparent;
+                border: none;
+            }
+            button{
+                display: flex;
+                padding: 6px 20px;
+                align-items: center;
+                border-radius: 12px;
+                border: 1px solid #DA002B;
+                background-color: #DA002B;
+                ion-icon{
+                    width: 28px;
+                    height: 28px;
+                    color: #fff;
+                }
+            }
+        }
+        &_pages{
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            &_link{
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                gap: 6px;
+                ion-icon{
+                    width: 24px;
+                    height: 24px;
+                }
+                p{
+                    font-size: 16px;
+                    color: #5c5c5c;
+                }
+            }
+        }
+    }
+}
